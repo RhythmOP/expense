@@ -68,12 +68,12 @@ document.addEventListener("DOMContentLoaded", () => {
       const item = document.createElement("div");
       item.classList.add("history-item");
       item.innerHTML = `
-        <strong>${transaction.type}</strong>
-        <p>Cost: €${transaction.cost}</p>
-        <p>Date: ${transaction.date}</p>
-        <p>Description: ${transaction.description}</p>
-        <p>Category: ${transaction.category}</p>
-        <p>Recurring: ${transaction.recurring ? "Yes" : "No"}</p>
+        <strong>₹{transaction.type}</strong>
+        <p>Cost: ₹{transaction.cost}</p>
+        <p>Date: ₹{transaction.date}</p>
+        <p>Description: ₹{transaction.description}</p>
+        <p>Category: ₹{transaction.category}</p>
+        <p>Recurring: ₹{transaction.recurring ? "Yes" : "No"}</p>
       `;
       transactionHistory.appendChild(item);
     });
