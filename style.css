@@ -1,0 +1,273 @@
+﻿/* Add these styles to style.css */
+
+
+/* style.css */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+.modal {
+  background: #fff;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+
+header {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+
+.amount-display {
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+
+label {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+
+input, select, button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
+input[type="date"] {
+  text-align: center;
+}
+
+
+.transaction-type {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+
+.transaction-type button {
+  flex: 1;
+  padding: 10px;
+  margin: 0 5px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #f0f0f0;
+  cursor: pointer;
+}
+
+
+.transaction-type button.active {
+  background: #ff5757;
+  color: #fff;
+}
+
+
+.recurring {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}/* Recurring Section */
+.recurring {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+
+.recurring label {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
+.recurring input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  border: 2px solid #4CAF50;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+
+/* When checkbox is checked */
+.recurring input[type="checkbox"]:checked {
+  background-color: #4CAF50;
+  border-color: #4CAF50;
+}
+
+
+.recurring input[type="checkbox"]:focus {
+  outline: none;
+  border-color: #007BFF;
+}
+
+
+/* Hover effect */
+.recurring input[type="checkbox"]:hover {
+  border-color: #45a049;
+}
+
+
+/* Optional Label Hover effect */
+.recurring label:hover {
+  color: #007BFF;
+  cursor: pointer;
+}
+
+
+
+
+.submit-btn {
+  background: #000;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+}
+
+
+.submit-btn:hover {
+  background: #333;
+}
+
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .modal {
+    padding: 15px;
+  }
+
+
+  .amount-display {
+    font-size: 28px;
+  }
+
+
+  .submit-btn {
+    font-size: 14px;
+  }
+}
+
+
+/* General styles for form inputs */
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
+/* View History Button */
+.view-history-btn {
+  margin-top: 20px;
+  background: #007bff;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+.view-history-btn:hover {
+  background: #0056b3;
+}
+
+
+/* Transaction History Section */
+.history {
+  margin-top: 20px;
+  padding: 10px;
+  background: #f8f9fa;
+  border-radius: 5px;
+  max-height: 200px;
+  overflow-y: auto;
+  display: none; /* Initially hidden */
+}
+
+
+.history-item {
+  padding: 10px;
+  margin-bottom: 10px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+
+.history-item strong {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+/* Reset any default styling and ensure padding works properly */
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+  padding: 10px; /* Add padding to all input fields */
+  padding-right: 10px; /* Ensure right padding is balanced */
+  width: 100%; /* Ensure inputs take full width of the container */
+  box-sizing: border-box; /* Include padding and border within the width */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+
+/* Specific styling for the recurring checkbox section */
+.recurring input[type="checkbox"] {
+  margin-right: 10px; /* Add space between checkbox and label */
+}
+
+
+/* Styling for the submit button */
+.submit-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+.submit-btn:hover {
+  background-color: #45a049;
+}
